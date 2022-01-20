@@ -1,0 +1,6 @@
+{
+    "example@example.com": "{\"id\":\"6bad2572-b926-440b-b0c1-16fef075246b\",\"username\":\"Demo username 31f5b9ba-f023-402b-864d-e79a0243083b\",\"password\":\"Qwerty12!\"}",
+    "test@test.com": "{\"id\":\"42c6356f-b184-4864-8c38-fb2dbcbe4e2a\",\"username\":\"Demo username ad3fd05e-4754-4919-9269-5e0e1448daf7\",\"password\":\"ABCD1231231!\"}",
+    "test111@test.com": "{\"id\":\"0e572a84-1aec-4fe6-b39b-42634574f337\",\"username\":\"Demo username d324fa40-a927-40ec-af69-95a1bab568d7\",\"password\":\"ACCCCC!\"}",
+    "test2222@test.com": "{\"id\":\"782ccaf8-9131-4896-8a22-9b31d30007ff\",\"username\":\"Demo username 782ccaf8-9131-4896-8a22-9b31d30007ff\",\"password\":\"ACCAAACCC!\"}"
+}

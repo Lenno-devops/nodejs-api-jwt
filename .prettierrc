@@ -1,0 +1,30 @@
+{
+  "printWidth": 120,
+  "files.insertFinalNewline": false,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false,
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": ["*.html", "legacy/**/*.js"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ],
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "rangeStart": 0
+}

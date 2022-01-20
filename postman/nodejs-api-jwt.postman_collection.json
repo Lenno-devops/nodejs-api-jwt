@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "627adcd0-7f54-49ba-b727-d5bc8a6df8cf",
+		"name": "nodejs-api-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test2222@test.com\",\r\n    \"password\": \"ACCAAACCC!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"test2222@test.com\",\r\n\"password\": \"ACCAAACCC!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-user-info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4MmNjYWY4LTkxMzEtNDg5Ni04YTIyLTliMzFkMzAwMDdmZiIsInVzZXJuYW1lIjoiRGVtbyB1c2VybmFtZSA3ODJjY2FmOC05MTMxLTQ4OTYtOGEyMi05YjMxZDMwMDA3ZmYiLCJlbWFpbCI6InRlc3QyMjIyQHRlc3QuY29tIiwiaWF0IjoxNjQyNjkxOTE3LCJleHAiOjE2NDI2OTE5Nzd9.okHYsD1gvvuT3EBTsC1aXDfn5ZpG5O4rFziAxry0D1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

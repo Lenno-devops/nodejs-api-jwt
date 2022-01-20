@@ -1,0 +1,83 @@
+{
+  "root": true, //only apply to current root dir
+  "extends": ["airbnb-base", "plugin:eslint-plugin/recommended"], //base is a more update version and higher Download rate
+  "env": {
+    //which environments your script is designed to run in.
+    "es6": true //enable all ECMAScript 6 features except for modules --all common JS standard
+  },
+  "parserOptions": {
+    "ecmaVersion": 6, //the version of ECMAScript syntax you want to use
+    "ecmaFeatures": {
+      //an object indicating which additional language features you'd like to use
+      "jsx": true
+    },
+    "sourceType": "module" //depends on ECMAScript type: module or script
+  },
+  "rules": {
+    "global-require": 0, // allow require() not import at the top level
+    "no-console": "off", // allow console
+    "import/prefer-default-export": "off", // export default is not applicable when only one module is exported
+    "import/no-unresolved": [
+      2,
+      {
+        // allow import source path with '@'
+        "ignore": ["^@/"]
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": { "multiline": true }
+      }
+    ], // allow object curly a newline
+    "no-nested-ternary": 0, // allow to use ternary expressions
+    "implicit-arrow-linebreak": ["off", "beside"],
+    // "no-multiple-empty-lines": 0, // no empty line at the end;
+    "import/extensions": "off", // no need file extension shown when importing
+    "operator-linebreak": ["off", "none"], // no need new line before the operator
+    "linebreak-style": [0, "error", "windows"], // allow the linebreak at windows
+    "comma-dangle": [2, "never"], //(default) disallows trailing commas
+    "object-curly-spacing": [2, "always"], //(default) disallows spacing inside of braces
+    "object-shorthand": [2, "always"], //(default) expects that the shorthand will be used whenever possible.
+    "array-bracket-spacing": [2, "never"], //(default) disallows spaces inside array brackets
+    // "eol-last": [2, "never"], //no new line at the end of the page
+    "max-len": [
+      2,
+      120,
+      {
+        //max length of code is 120, but this rule will not apply to the following fields.
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "consistent-return": 0, //(default) always either specify values or return "undefined" implicitly only.
+
+    "prefer-destructuring": [2, { "array": false, "object": false }, { "enforceForRenamedProperties": false }], //creating variables from an array index or object property
+    "prefer-object-spread": 0, // Prefer use of an object spread over Object.assign.//This rule should not be used unless ES2018 is supported in your codebase.
+    "prefer-rest-params": 0, // require rest parameters instead of `arguments`,//should not be used in ES3/5 environments
+    "prefer-spread": 0, // require spread operators instead of `.apply()`,//should not be used in ES3/5 environments
+    "function-paren-newline": 0, //disallows line breaks inside all function parentheses.
+    "no-plusplus": 0, //This rule disallows the unary operators ++ and --.
+    "no-param-reassign": 0, //preffer not to re-assign function parameter
+    "valid-jsdoc": [
+      2,
+      {
+        "requireReturn": false, // if and only if the function or method has a return statement or returns a value
+        "requireParamDescription": false, //allows missing description in parameter tags
+        "requireReturnDescription": false //allows missing description in return tags
+      }
+    ]
+  },
+  "overrides": [
+    //only for example. optional
+    //override settings based on file
+    {
+      "files": ["bin/*.js", "lib/*.js"],
+      "excludedFiles": "*.test.js",
+      "rules": {
+        "quotes": ["error", "single"]
+      }
+    }
+  ]
+}
